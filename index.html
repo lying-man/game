@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone, Scissors and Paper</title>
+    <link rel="icon" href="Images/Image for game/logo.svg">
+    <link rel="stylesheet" href="CSS/fake.css">
+</head>
+<body>
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader-item"></div>
+        <div class="preloader-item"></div>
+        <div class="preloader-item"></div>
+    </div>
+
+    <main class="wrapper-page">
+
+        <!-- профиль -->
+        <div class="profile-block">
+            <div class="profile-title">Профиль</div>
+            <div class="user-profile-avatar">
+                <img src="Images/Image for game/defaultuser-image.svg" class="user-profile-img" alt="picture of user">
+            </div>
+            <div class="choose-name-user">User</div>
+            <div class="choose-block-name">
+                <input type="text" maxlength="10" class="choose-name-field" value="">
+                <button class="submit-choose-name">ОК</button>
+            </div>
+            <div class="choose-block-img">
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game/defaultuser-image.svg" alt="picture avatar" class="image-avatar">
+                </div>
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game/guard.svg" alt="picture avatar" class="image-avatar">
+                </div>
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game/knight.svg" alt="picture avatar" class="image-avatar">
+                </div>
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game/princess.svg" alt="picture avatar" class="image-avatar">
+                </div>
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game//sultan.svg" alt="picture avatar" class="image-avatar">
+                </div>
+                <div class="image-new-avatar">
+                    <img src="Images/Image for game/tsar.svg" alt="picture avatar" class="image-avatar">
+                </div>
+            </div>
+            <button class="btn-close-profile">
+                <img src="Images/Image for game/close-profile.svg" alt="close icon">
+            </button>
+        </div>
+
+        <!-- написать автору -->
+        <div class="write-author-block">
+            <div class="write-author-title">Тут вы можете оставить ваш королевский отзыв о моей игре</div>
+            <form action="#" method="POST">
+                <div class="block-write">
+                    <div class="block-write-title">Представьтесь пожалуста</div>
+                    <input type="text" value="Имя..." name="user__name" class="inp__write-name">
+                </div>
+                <div class="block-write">
+                    <div class="block-write-title">Ваше сообщение</div>
+                    <textarea name="text__user" class="message-user" value="Ваше сообщение...">Ваше сообщение...</textarea>
+                </div>
+                <button class="send-user-message" type="submit">Отправить сообщение</button>
+            </form>
+            <button class="btn-close-profile btn-close-message">
+                <img src="Images/Image for game/close-profile.svg" alt="close icon">
+            </button>
+            <div class="message-sending">Сообщение успешно отправлено</div>
+        </div>
+
+        <!-- статистика -->
+        <div class="statistic-block">
+            <div class="statistic-caption">Ваша статистика</div>
+            <div class="stat stat-first">
+                <div class="title-stat">Вы выиграли:</div>
+                <div class="stat-wins">0</div>
+            </div>
+            <div class="stat stat-second">
+                <div class="title-stat">Вы проиграли:</div>
+                <div class="stat-lose">0</div>
+            </div>
+            <button class="btn-close-stat">OK</button>
+        </div>
+
+        <!-- окно показа победителя -->
+        <div class="modal-winner">
+            <div class="winner-title">Победил Кто-то</div>
+            <div class="winner-icon">
+                <img src="Images/Image for game/computer-image.svg" class="winner-icon-item" alt="picture winner">
+            </div>
+        </div>
+
+        <!-- основной процесс игры -->
+        <div class="process-game">
+            <div class="block-attack attack-user">
+                <img src="Images/Image for game/scissors.svg" alt="picture" class="background-process-image bgc-image-user">
+                <img src="Images/Image for game/defaultuser-image.svg" alt="picture user" class="image-process-game image-user-process">
+                <div class="title-process-game title-process-user">User</div>
+            </div>
+
+            <div class="vs-item">VS</div>
+
+            <div class="block-attack attack-computer">
+                <img src="Images/Image for game/notes.svg" alt="picture" class="background-process-image bgc-image-computer">
+                <div class="title-process-game">Computer</div>
+                <img src="Images/Image for game/computer-image.svg" alt="picture user" class="image-process-game">
+            </div>
+        </div>
+
+        <div class="user-avatar">
+            <img src="Images/Image for game/defaultuser-image.svg" class="user-avatar-image" alt="picture user">
+            <div class="wrapper-menu-profile">
+                <ul class="menu-proile">
+                    <li class="menu__item profile">Профиль</li>
+                    <li class="menu__item statistic">Статистика</li>
+                    <li class="menu__item write-author">Написать автору</li>
+                    <li class="menu__item about--game">О игре</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="score">
+            <div class="score-block">
+                <div class="image-score">
+                    <img src="Images/Image for game/defaultuser-image.svg" class="score-user-image" alt="picture of user">
+                </div>
+                <div class="title-score title-score-user">User</div>
+                <div class="score-count user-score">0</div>
+            </div>
+            <div class="score-block">
+                <div class="image-score">
+                    <img src="Images/Image for game/computer-image.svg" class="score-computer-image" alt="picture of computer">
+                </div>
+                <div class="title-score">Computer</div>
+                <div class="score-count computer-score">0</div>
+            </div>
+        </div>
+
+        <div class="overlay-hint"></div>
+
+        <div class="modal-hint">
+            <div class="modal-hint-content">
+                <div class="modal-hint-title">
+                    Ваш игровой процесс может стать быстрее, если вы начнёте использовать клавиши для быстрого доступа к игровым действиям
+                </div>
+                <ul class="modal-hint-text">
+                    <li>Используйте эту клавишу для выбора камня</li>
+                    <li>Используйте эту клавишу для выбора бумаги</li>
+                    <li>Используйте эту клавишу для выбора ножниц</li>
+                    <li>А эту клавишу используйте для того, что-бы сделать ход</li>
+                </ul>
+                <button class="btn-close-modal">OK</button>
+            </div>
+        </div>
+
+        <button class="hint-by-game">
+            Открыть подсказку
+        </button>
+
+        <div class="wrapper-icons">
+            <div class="icon-choose-user stone">
+                <img class="icon-choose-img" src="Images/Image for game/rock.svg" alt="picture stone">
+            </div>
+            <div class="icon-choose-user paper">
+                <img class="icon-choose-img" src="Images/Image for game/notes.svg" alt="picture paper">
+            </div>
+            <div class="icon-choose-user scissors">
+                <img class="icon-choose-img" src="Images/Image for game/scissors.svg" alt="picture scissors">
+            </div>
+        </div>
+
+        <div class="wrapper-actions">
+            <div class="actions-title">Каков будет ваш ход?</div>
+            <div class="actions-user">
+                <button class="actions-user-item stone">
+                    Камень
+                </button>
+                <button class="actions-user-item paper">
+                    Бумага
+                </button>
+                <button class="actions-user-item scissors">
+                    Ножницы
+                </button>
+            </div>
+            <button class="submit-action">Сделать ход</button>
+        </div>
+
+        <!-- описание каждого автара -->
+        <div class="hint-for-avatars">Выбирайте этот аватар если хотите быть королём</div>
+
+        <!-- о игре -->
+        <div class="about-game">
+            <div class="about-game-text">
+                Скажу сразу в этой игре нет багов только вне этой игры, создатель игры это знает, но чинить это всё он не будет, так как это очень долгий по времени процесс, требующий высоких навыков от создателя (на самом деле он просто ленивая жопа).
+                Cпонсором этой игры является "ночь", если бы не было этого замечательного явления, автор не смог бы сделать столь огромный для него проект (Зато смог бы выспаться). 
+                Также автор должен упомянуть неких людей, которые своими невероятными способностями ушей помогали продвигаться автору в 
+                разработке этой игры, их терпение заслуживает большой благодарности. Вообщем всем приятного горошка на ноге:).
+                А автор игры ушёл пить чай.
+            </div>
+            <button class="close-about-game">ОК</button>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="JS/fake.js"></script>
+</body>
+</html>
